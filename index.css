@@ -181,7 +181,7 @@ html {
 
 .introduction {
   width: 100%;
-  height: 400px;
+  height: 600px;
   position: relative;
   box-sizing: border-box;
   display: flex;
@@ -390,6 +390,7 @@ html {
     z-index:  0;
   }
   100% {
+    /* background: rgb(81, 255, 139); */
     background: rgb(53,147,207);
     opacity: .5;
     z-index: 100;
@@ -652,35 +653,168 @@ html {
 .messenger-box {
   position: absolute;
   bottom: 0;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   right: 90px;
   width: 250px;
   height: 250px;
   display: grid;
   grid-template-rows:
-  10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  /*1% 1% 1% 1% 1% 1% 1% 1% 1% 1%;
-   1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%; */
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%;
   grid-template-columns: 
-  10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  /*1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-   1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%
-  1% 1% 1% 1% 1% 1% 1% 1% 1% 1%; */
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%
+  2% 2% 2% 2% 2% 2% 2% 2% 2% 2%;
   border-radius: 50%;
   overflow: hidden;
+  animation: pixel-rotate .08s linear 500;
+}
+
+@keyframes pixel-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.featured-projects {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  margin-top: 15rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.project-left {
+  width: 50%;
+  height: 100%;
+  background: rgb(255, 215, 211);
+  transform: skewX(-45deg);
+}
+
+.project-right {
+  width: 50%;
+  height: 100%;
+  background: rgb(200, 234, 255);
+  transform: skewX(-45deg);
+}
+
+.project-left-fill {
+  width: 50%;
+  height: 50%;
+  transform: skewX(45deg) translateX(-50%);
+  background: rgb(255, 215, 211);
+}
+
+.project-right-fill {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform: skewX(45deg) translateX(50%);
+  background: rgb(200, 234, 255);
+}
+
+.featured-projects-header {
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  z-index: 5;
+  position: absolute;
+  display: block;
+  margin: 0;
+  top: .8rem;
+  left: 20%;
+  width: 60%;
+  height: 4rem;
+  font-size: 4rem;
+  font-weight: 100;
+  font-family: 'Anton', sans-serif;
+  color: rgb(103, 146, 255);
+}
+
+.project-left-info {
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid black;
+  transform: skewX(45deg) translateX(-10%);
+}
+
+.project-right-info {
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid black;
+  transform: skewX(45deg) translateX(10%);
+}
+
+.project-left-backdrop {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  border:  1px solid black; 
+}
+
+.project-right-backdrop {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  border:  1px solid black; 
+}
+
+.feature-top-left-corner {
+  z-index:5;
+  width: 2100px;
+  height: 2100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  transform: translate(-75%, -75%);
+}
+
+.ftlc-circle {
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
+.feature-top-right-corner {
+  z-index:5;
+  width: 2100px;
+  height: 2100px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid black;
+  transform: translate(75%, 75%);
+}
+
+.ftrc-circle {
+  width: 100%;
+  height: 100%;
+  border: 2px solid red;
+  border-radius: 50%;
 }

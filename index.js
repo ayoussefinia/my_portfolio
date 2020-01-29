@@ -2,6 +2,7 @@ console.log('index js loaded');
 var classStringArray = [];
 
 $( document ).ready(function() {
+  //creates an array of objects with two key value pairs row and column wich will end in  50 rows and columns i.e.a perfect squre
   var classObjArray = [];
   for(var j=1; j<=50; j++) {
     for(var i=1; i<=50; i++){
@@ -15,18 +16,16 @@ $( document ).ready(function() {
       classObjArray.push(coordinatesObject)
     }
   }
-
-  // console.log(classObjArray);
-
-  
+//accesses the array of key value pairsand converts to an arry of class name strings
   for(var k=0; k<=2499; k++) {
-    
     var classString ="row"+classObjArray[k].row+"column"+classObjArray[k].column;
     classStringArray.push(classString);
   }
 
 
 console.log(classStringArray);
+
+//creates divs and attaches the classes from the array above to add to the flexbox container div
   for(var x=1; x<=2500; x++) {
 
     var div =   $('<div/>').addClass(classStringArray[x]); 
@@ -36,6 +35,70 @@ console.log(classStringArray);
   }
   // $(".row5column5").css({"width" : "100%", "height" : "100%", "background":"black"});
 });
+
+
+$(window).scroll(function() {
+  var $height = $(window).scrollTop();
+  console.log($height);
+
+  if($height >= 210) {
+    $('.github-left').addClass('animate-top-right');
+    $('.window-left').addClass('animate-bottom-left');
+  } else {
+    $('.github-left').removeClass('animate-top-right');
+    $('.window-left').removeClass('animate-bottom-left');
+  }
+
+
+  if($height >= 560) {
+    $('.project-left-title').addClass('title-bulge-out');
+    $('.project-left-feature1').addClass('bulge-out-2');
+    $('.project-left-feature2').addClass('bulge-out-3');
+    $('.project-left-feature3').addClass('bulge-out-4');
+    $('.project-left-feature4').addClass('bulge-out-5');
+    $('.project-left-feature5').addClass('bulge-out-6');
+
+    $('.project-right-title').addClass('title-bulge-out');
+    $('.project-right-feature1').addClass('bulge-out-2');
+    $('.project-right-feature2').addClass('bulge-out-3');
+    $('.project-right-feature3').addClass('bulge-out-4');
+    $('.project-right-feature4').addClass('bulge-out-5');
+    $('.project-right-feature5').addClass('bulge-out-6');
+  } else {
+    $('.project-left-title').removeClass('title-bulge-out');
+    $('.project-left-feature1').removeClass('bulge-out-2');
+    $('.project-left-feature2').removeClass('bulge-out-3');
+    $('.project-left-feature3').removeClass('bulge-out-4');
+    $('.project-left-feature4').removeClass('bulge-out-5');
+    $('.project-left-feature5').removeClass('bulge-out-6');
+
+    $('.project-right-title').removeClass('title-bulge-out');
+    $('.project-right-feature1').removeClass('bulge-out-2');
+    $('.project-right-feature2').removeClass('bulge-out-3');
+    $('.project-right-feature3').removeClass('bulge-out-4');
+    $('.project-right-feature4').removeClass('bulge-out-5');
+    $('.project-right-feature5').removeClass('bulge-out-6');
+  }
+
+
+  if($height >= 710) {
+    $('.github-right').addClass('animate-top-right');
+    $('.window-right').addClass('animate-bottom-left');
+  } else {
+    $('.github-right').removeClass('animate-top-right');
+    $('.window-right').removeClass('animate-bottom-left');
+  }
+  // if($height > 50) {
+	// 	$('#header').addClass('active');
+	// } else {
+	// 	$('#header').removeClass('active');
+	// }
+});
+
+
+
+
+
 
 
 let timerRed = (time, cls) => {

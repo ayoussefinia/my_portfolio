@@ -36,6 +36,25 @@ console.log(classStringArray);
   // $(".row5column5").css({"width" : "100%", "height" : "100%", "background":"black"});
 });
 
+var bannerTextElements = document.querySelectorAll('.banner-title');
+for(var i=0; i<bannerTextElements.length; i++) {
+  var bannerTextArry = []
+  var joinedArray = '';
+  console.log(bannerTextElements[i].textContent)
+  for(var j=0; j<bannerTextElements[i].textContent.length; j++) {
+    // var span = $('<span/>').addClass('image-banner-font').text(bannerText)
+    var spanText = `<span class="image-banner-font">${bannerTextElements[i].textContent[j].toUpperCase()}</span>`;
+    bannerTextArry.push(spanText);
+    
+  }
+  var joinedArray = bannerTextArry.join(' ');
+  var title = '.banner-title-'+i;
+  console.log(title);
+  console.log(joinedArray)
+  $(title).html(joinedArray);
+}
+
+
 
 $(window).scroll(function() {
   var $height = $(window).scrollTop();

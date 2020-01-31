@@ -170,14 +170,27 @@
                         <div class='shaded-background-banner'></div>
                     </div>
                     
-                    <div class='black-background details-icon'>
+                    <div class='black-background details-icon details-icon-0' data='0'>
                         
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                     </div>
                     <img src="https://images.unsplash.com/photo-1438109382753-8368e7e1e7cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-0'>
+                        <p class='description-text'>
+                            This was a final group project with four team members. The idea was to be able to build a virtual garden that represents your actual garden at home. The initial goal was to connect the application to plant/garden APIs for tips and tricks about growing better. We found that there were no good plant APIs so we seeded our Mongo database with data that we scraped off of a popular plant website. If a user cant find a plant among the list of popular plants we created, they could add their own. For the rarest of plants users could upload an image to our applicaiton using AWS as an image hosting service. We implimented this using AWS-S3 buckets. Lastly, each plant and garden has a notes section where users could comment on gardens and plants. Version control and agile/scrum were also part of the workflow for this project. My responsibilities were too impliment CRUD Functionality for users, gardens and plants. 
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   <li>MERN Stack</li>
+                            <li>Full Stack CRUD (MERN)</li>
+                            <li>React (with hooks)</li>
+                            <li>weather API</li>
+                            <li>Backend User Auth (private components were never implimented)</li>
+                            <li>AWS - S3</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class='card-right'>
                     <div class='card-right-square'></div>
@@ -185,6 +198,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-blue"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-blue"></i>
                 <div class='card-bottom-right'></div>
                 </div>
             </div>
@@ -197,13 +212,26 @@
                             <h4 class='banner-title banner-title-1'>NYT Article Scraper</h4>
                                 <div class='shaded-background-banner'></div>
                     </div>
-                    <div class='black-background details-icon'>
+                    <div class='black-background details-icon details-icon-1'  data='1'>
                             <div class='shaded-background'></div>
                             <div class='details-icon-container'>
-                                <i class="fas fa-list-ul  fa-2x"></i>
+                                <i class="fas fa-list-ul  fa-1x"></i>
                             </div>
                     </div>
                     <img src="https://images.unsplash.com/photo-1504465039710-0f49c0a47eb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-1'>
+                            <p class='description-text'>
+                                Full Stack web scraping application. This project was meant to build skills in breaking down the DOM Tree of a well known website (in this case The New York Times) and scrape useful data off the website using various query selectors. After the front page of the website is scraped (in this case for the first 30 articles) a user can delete the articles they dont like and make notes on articles they find interesting. Notes and artiles are stored in an MongoDB back end. Cheerio npm packge was used as a jQuery mimicing query selector tool. Morgan npm package was used to log requests.
+                            </p>
+                            <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                            <ul class='technologies-list'>   <li>JQuery</li>
+                                <li>Handlebars</li>
+                                <li>MongoDB (mongoose)</li>
+                                <li>Axios</li>
+                                <li>Bootstrap</li>
+                                <li>Cheerio</li>
+                            </ul>
+                        </div>
                 </div>
                 <div class='card-right'>
                     <div class='card-right-square'></div>
@@ -211,6 +239,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-blue"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-blue"></i>
                 <div class='card-bottom-right'></div>
                 </div>
             </div>
@@ -223,14 +253,25 @@
                     <h4 class='banner-title banner-title-2'>Comedy Show Finder</h4>
                     <div class='shaded-background-banner'></div>
                 </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-2' data='2'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                 
                     <img src="https://images.unsplash.com/photo-1563726351554-179049599895?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-2'>
+                            <p class='description-text'>
+                               This was my first group project. The idea was to use a ticket API (in this case seatgeek's) and incorporate wikipedia and youtube APIs to assemble quick snapshot of a commedian's comedy content. This way with minimal clicks you can decide on the fly whether the show happening near you is worth going to or not. As a side note this project was my introduction to incorporating git version control in a group setting. I learned the importance of utilizing proper (pull-merge-push-pull-request) branch modification in a team enviornment.  I was responsible for connecting all three api's in this project. 
+                            </p>
+                            <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                            <ul class='technologies-list'>   <li>SASS</li>
+                                <li>Youtube API</li>
+                                <li>Wiki API</li>
+                                <li>SeatGeek API</li>
+                            </ul>
+                        </div>
                 
                 </div>
                 <div class='card-right'>
@@ -239,6 +280,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-blue"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-blue"></i>
                 <div class='card-bottom-right'></div>
                 </div>
             </div>
@@ -251,14 +294,25 @@
                         <h4 class='banner-title banner-title-3'>Friend Finder</h4>
                         <div class='shaded-background-banner'></div>
                 </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-3' data='3'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                 
                     <img src="https://images.unsplash.com/photo-1522098605161-cc0c1434c31a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-3'>
+                        <p class='description-text'>
+                            Tinder for friends. This app has an express backend that renders two different files. No view engine is used. instead the app utilizes the node path dependency to send two different html pages (survey.html & home.html) upon request.
+                            The flow is such that the user will answer some questions on the survey.html view. when the form data is submitted, answers are compared with a dataset of other responses. the other responses are fabricated in a js file (friends.js) that sits in a data directory. The person that answers questions most similarly to your answers will be your friend match. 
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>Express</li>
+                            <li>Path</li>
+                        </ul>
+                    </div>
                 
                 </div>
                 <div class='card-right'>
@@ -267,6 +321,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-blue"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-blue"></i>
                 <div class='card-bottom-right'></div>
                 </div>
             </div>
@@ -282,13 +338,23 @@
             <h3 class='banner-title banner-title-4'>Star wars game</h3>
                 <div class='shaded-background-banner'></div>
             </div>
-            <div class='black-background details-icon'>
+            <div class='black-background details-icon details-icon-4' data='4'>
                     <div class='shaded-background'></div>
                     <div class='details-icon-container'>
-                        <i class="fas fa-list-ul  fa-2x"></i>
+                        <i class="fas fa-list-ul  fa-1x"></i>
                     </div>
             </div>
                 <img src="https://images.unsplash.com/photo-1568578728400-95dd4f33a85b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                <div class='portfolio-description description-4'>
+                    <p class='description-text'>
+                        Each star wars character is a JS object with a life-force property and hit-power property. You begin by selecting your player and your opponent. When you attack your opponent your chance of hitting is randomized. If you hit you damage your opponents life force. Your damage ability is affected by your hit-power. If you defeat your opponent you absorb some of their life-force making you stronger. You win the game by defeating all opponents. JavaScript template strings are used to display useful information in the game message-box. 
+                    </p>
+                    <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                    <ul class='technologies-list'>   
+                        <li>JavaScript</li>
+                        <li>OOP</li>
+                    </ul>
+                </div>
             </div>
             <div class='card-right'>
                 <div class='card-right-square-red'></div>
@@ -296,6 +362,8 @@
         </div>
         <div class='blue-card-bottom'>
             <div class='card-bottom-left-red'>
+                <i class="fab fa-github-square fa-2x  portfolio-github deployed-red"></i>
+                <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-red"></i>
             <div class='card-bottom-right-red'></div>
             </div>
         </div>
@@ -308,13 +376,23 @@
                     <h3 class='banner-title banner-title-5'>Trivia Game</h3>
                     <div class='shaded-background-banner'></div>
                 </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-5' data='5'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                     <img src="https://images.unsplash.com/photo-1514539079130-25950c84af65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-5'>
+                        <p class='description-text'>
+                            This program utilizes setTimeout and setInterval methods to test the user on their 90's horror movie knowlege. The user should be slightly spooked as a distraction from getting the correct answer. At the end of the game the scorecard is revealed. 
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>setTimeout()</li>
+                            <li>setInterval()</li>
+                        </ul>
+                    </div>
             </div>
             <div class='card-right'>
                 <div class='card-right-square-red'></div>
@@ -322,6 +400,8 @@
         </div>
         <div class='blue-card-bottom'>
             <div class='card-bottom-left-red'>
+                <i class="fab fa-github-square fa-2x  portfolio-github deployed-red"></i>
+                <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-red"></i>
             <div class='card-bottom-right-red'></div>
             </div>
         </div>
@@ -334,13 +414,25 @@
                     <h3 class='banner-title banner-title-6'>Burger Builder</h3>
                     <div class='shaded-background-banner'></div>
                 </div>
-            <div class='black-background details-icon'>
+            <div class='black-background details-icon details-icon-6' data='6'>
                     <div class='shaded-background'></div>
                     <div class='details-icon-container'>
-                        <i class="fas fa-list-ul  fa-2x"></i>
+                        <i class="fas fa-list-ul  fa-1x"></i>
                     </div>
                 </div>
                     <img src="https://images.unsplash.com/photo-1530554764233-e79e16c91d08?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-6'>
+                        <p class='description-text'>
+                            This is a full stack application where a user could create the burger of their dreams then choose to eat it, make another or forget about it all together. This app uses mySQL to store burger information and express-handlebars as a view engine. 
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>SQL</li>
+                            <li>Handlebars</li>
+                            <li>Express</li>
+                            <li>CRUD</li>
+                        </ul>
+                    </div>
             </div>
             <div class='card-right'>
                 <div class='card-right-square-red'></div>
@@ -348,6 +440,8 @@
         </div>
         <div class='blue-card-bottom'>
             <div class='card-bottom-left-red'>
+                <i class="fab fa-github-square fa-2x  portfolio-github deployed-red"></i>
+                <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-red"></i>
             <div class='card-bottom-right-red'></div>
             </div>
         </div>
@@ -360,13 +454,23 @@
                     <h3 class='banner-title banner-title-7'>Train Scheduler</h3>
                     <div class='shaded-background-banner'></div>
                 </div>
-            <div class='black-background details-icon'>
+            <div class='black-background details-icon details-icon-7' data='7'>
                     <div class='shaded-background'></div>
                     <div class='details-icon-container'>
-                        <i class="fas fa-list-ul  fa-2x"></i>
+                        <i class="fas fa-list-ul  fa-1x"></i>
                     </div>
                 </div>
                 <img src="https://images.unsplash.com/photo-1503776470087-3569342b4a2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                <div class='portfolio-description description-7'>
+                    <p class='description-text'>
+                        Cloud based application via Firebase. The idea for this project was to mimic an application that could be used by a train station scheduler so that routes, arrival times, and frequency of train routes could be moderated in real time. 
+                    </p>
+                    <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                    <ul class='technologies-list'>   
+                        <li>Firebase</li>
+                        <li>Moment.js</li>
+                    </ul>
+                </div>
             </div>
             <div class='card-right'>
                 <div class='card-right-square-red'></div>
@@ -374,6 +478,8 @@
         </div>
         <div class='blue-card-bottom'>
             <div class='card-bottom-left-red'>
+                <i class="fab fa-github-square fa-2x  portfolio-github deployed-red"></i>
+                <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-red"></i>
             <div class='card-bottom-right-red'></div>
             </div>
         </div>
@@ -386,13 +492,24 @@
                             <h3 class='banner-title banner-title-8'>Bamazon</h3>
                             <div class='shaded-background-banner'></div>
                     </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-8' data='8'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                     <img src="https://images.unsplash.com/photo-1577702312706-e23ff063064f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-8'>
+                        <p class='description-text'>
+                            Command line application with a databaase and no server. A hypothetical store manager could use the command line to query/modify inventories, add products, and change prices. A video demo of the application could be seen below. This app uses npm inquirer package to question the user and command line arguments as answers/inputs to functions that modify the SQL back end. npm table package is used to display snapshots of inventory upon request. 
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>npm Inquirer</li>
+                            <li>SQL</li>
+                            <li>npm Table</li>S
+                        </ul>
+                    </div>
                 </div>
                 <div class='card-right'>
                     <div class='card-right-square-red'></div>
@@ -400,6 +517,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left-red'>
+                <i class="fab fa-github-square fa-2x  portfolio-github deployed-red"></i>
+                <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-red"></i>
                 <div class='card-bottom-right-red'></div>
                 </div>
             </div>
@@ -415,13 +534,28 @@
                     <h3 class='banner-title banner-title-9'>Meal Share</h3>
                     <div class='shaded-background-banner'></div>
                 </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-9' data='9'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                     <img src="https://images.unsplash.com/photo-1573629964953-c4410121abf5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-9'>
+                        <p class='description-text'>
+                            Full Stack CRUD Group Project. The idea for this application was to make  a meal-share app similar to ride share. The app allows you to make a certain number of a particular meal and post the meal for display in the application. Other users can log in to the app and see a list of meals (in the form of an image carosel) and decide which seems most appealing or make their own. The app puts the owness on the comsumer of the meal to contact the maker for retreval. Despite the many real world concerns with impimenting something like this, the project provided excelent git version controll practice in a team setting. My responsibilities were to set up routes, connect front end views to backend data, and impliment user authentication. 
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>Express</li>
+                            <li>SQL</li>
+                            <li>Handlebars</li>
+                            <li>Passport</li>
+                            <li>bcrypt</li>
+                            <li>protected routes (middleware)</li>
+                            <li>Express-Sessions</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class='card-right'>
                     <div class='card-right-square-green'></div>
@@ -429,6 +563,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left-green'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-green"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-green"></i>
                 <div class='card-bottom-right-green'></div>
                 </div>
             </div>
@@ -441,13 +577,18 @@
                         <h3 class='banner-title banner-title-10'>Word Guess Game</h3>
                         <div class='shaded-background-banner'></div>
                     </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-10' data='10'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                     <img src="https://images.unsplash.com/photo-1546241072-48010ad2862c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-10'>
+                        <p class='description-text'>
+                            This is a game where a superfood is randomly selected from an array of super-foods and the user is prompted to guess one letter at a time until either the word is correctly guessed or the user runs out of attempts. each time a letter is correctly guessed the UI is modified to display the correct letter (hang man style)
+                        </p>
+                    </div>
                 </div>
                 <div class='card-right'>
                     <div class='card-right-square-green'></div>
@@ -455,6 +596,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left-green'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-green"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-green"></i>
                 <div class='card-bottom-right-green'></div>
                 </div>
             </div>
@@ -467,13 +610,23 @@
                     <h3 class='banner-title banner-title-11'>Get Giphy</h3>
                     <div class='shaded-background-banner'></div>
                 </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-11' data='11'>
                         <div class='shaded-background'></div>
                         <div class='details-icon-container'>
-                            <i class="fas fa-list-ul  fa-2x"></i>
+                            <i class="fas fa-list-ul  fa-1x"></i>
                         </div>
                 </div>
                     <img src="https://images.unsplash.com/photo-1561505397-8e667b30ef2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
+                    <div class='portfolio-description description-11'>
+                        <p class='description-text'>
+                            Giphy retreval from the developers.giphy.com API. A user can request giphys by clicking on a button from a pre-fabricated list of subjects. A user can also request thier own subject. If the list of buttons grows too long, a user can drag and drop one of the buttons into the trash-can icon to make space for additional subject button creation.
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>AJAX</li>
+                            <li>Giphy API</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class='card-right'>
                     <div class='card-right-square-green'></div>
@@ -481,6 +634,9 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left-green'>
+                <i class="fab fa-github-square fa-2x  portfolio-github deployed-green"></i>
+                <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-green"></i>
+                    
                 <div class='card-bottom-right-green'></div>
                 </div>
             </div>
@@ -493,15 +649,27 @@
                         <h3 class='banner-title banner-title-12'>LIRI BOT</h3>
                         <div class='shaded-background-banner'></div>
                 </div>
-                <div class='black-background details-icon'>
+                <div class='black-background details-icon details-icon-12' data='12'>
                 <div class='shaded-background'></div>
                 <div class='details-icon-container'>
-                    <i class="fas fa-list-ul  fa-2x"></i>
+                    <i class="fas fa-list-ul  fa-1x"></i>
                 </div>
                 </div>
                     
                     <img src="https://images.unsplash.com/photo-1579437476011-ff81693c1a36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=261.765&q=60" alt="" class='portfolio-image'>
-                    
+                    <div class='portfolio-description description-12'>
+                        <p class='description-text'>
+                            Command line entertainment application where a user can search artist/song information via command line arguements. I.e. a user can search "i want it that way" which will call the spotify api and display artist name(s), and album name -> Backstreet Boys-Millenium .  A user can search for performances of an artist they like by calling the bands in town api which will resond with a list of cities, venues and dates for an artist. Users can call the OMDB api with a name of a movie/series, and the response will show movie statistics (year, actors, plot etc.). As if this wasn't enought the app allows you to make the "spotify this song" command which will open spotify  in your browser ad play the song provided as a command line argument. Video demo can be seen below
+                        </p>
+                        <h4 class='description-header'>TECHNOLOGIES USED: </h4>
+                        <ul class='technologies-list'>   
+                            <li>Spotify API</li>
+                            <li>Bands In Town API</li>
+                            <li>OMDB API</li>
+                            <li>Axios</li>
+                            <li>Moment</li>
+                        </ul>
+                    </div>
                     
                     
                 </img>
@@ -512,6 +680,8 @@
             </div>
             <div class='blue-card-bottom'>
                 <div class='card-bottom-left-green'>
+                    <i class="fab fa-github-square fa-2x  portfolio-github deployed-green"></i>
+                    <i class="far fa-window-maximize fa-2x portfolio-deployed deployed-green"></i>
                 <div class='card-bottom-right-green'></div>
                 </div>
             </div>

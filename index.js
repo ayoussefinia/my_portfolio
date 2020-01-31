@@ -54,7 +54,44 @@ for(var i=0; i<bannerTextElements.length; i++) {
   $(title).html(joinedArray);
 }
 
+console.log($('.details-icon'))
+var detailsIcons = $('.details-icon');
+for(var i=0; i<detailsIcons.length; i++) {
+  var classString = '.details-icon-'+i;
+  $(classString).click(function(){
 
+
+    
+    var index = $(this).attr('data');
+    console.log('index', index);
+    var descriptionDivClassName = '.description-'+index;
+  
+    if($(descriptionDivClassName).hasClass('description-show')) {
+      $(descriptionDivClassName).removeClass('description-show');
+      $(descriptionDivClassName).addClass('description-hide')
+    } else {
+      $(descriptionDivClassName).removeClass('description-hide')
+      $(descriptionDivClassName).addClass('description-show') 
+    }
+    
+  })
+  
+}
+
+// $('.details-icon').click(function(){
+
+//   var index = $('.details-icon').attr('data');
+//   var descriptionDivClassName = '.description-'+index;
+
+//   if($(descriptionDivClassName).hasClass('description-show')) {
+//     $(descriptionDivClassName).removeClass('description-show');
+//     $(descriptionDivClassName).addClass('description-hide')
+//   } else {
+//     $(descriptionDivClassName).removeClass('description-hide')
+//     $(descriptionDivClassName).addClass('description-show') 
+//   }
+  
+// })
 
 $(window).scroll(function() {
   var $height = $(window).scrollTop();

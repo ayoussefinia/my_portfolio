@@ -30,8 +30,11 @@ console.log(classStringArray);
 
     var div =   $('<div/>').addClass(classStringArray[x]); 
     div.css({"width" : "100%", "height" : "100%"});
+    // var div2 =   $('<div/>').addClass('twin-'+classStringArray[x]); 
+    // div2.css({"width" : "100%", "height" : "100%"});
  
     $('.messenger-box').append(div);
+    // $('.messenger-box-twin').append(div2);
   }
   // $(".row5column5").css({"width" : "100%", "height" : "100%", "background":"black"});
 });
@@ -49,8 +52,8 @@ for(var i=0; i<bannerTextElements.length; i++) {
   }
   var joinedArray = bannerTextArry.join(' ');
   var title = '.banner-title-'+i;
-  console.log(title);
-  console.log(joinedArray)
+  // console.log(title);
+  // console.log(joinedArray)
   $(title).html(joinedArray);
 }
 
@@ -78,20 +81,6 @@ for(var i=0; i<detailsIcons.length; i++) {
   
 }
 
-// $('.details-icon').click(function(){
-
-//   var index = $('.details-icon').attr('data');
-//   var descriptionDivClassName = '.description-'+index;
-
-//   if($(descriptionDivClassName).hasClass('description-show')) {
-//     $(descriptionDivClassName).removeClass('description-show');
-//     $(descriptionDivClassName).addClass('description-hide')
-//   } else {
-//     $(descriptionDivClassName).removeClass('description-hide')
-//     $(descriptionDivClassName).addClass('description-show') 
-//   }
-  
-// })
 
 $(window).scroll(function() {
   var $height = $(window).scrollTop();
@@ -144,14 +133,60 @@ $(window).scroll(function() {
     $('.github-right').removeClass('animate-top-right');
     $('.window-right').removeClass('animate-bottom-left');
   }
-  // if($height > 50) {
-	// 	$('#header').addClass('active');
-	// } else {
-	// 	$('#header').removeClass('active');
-	// }
+
+var aboutMeTextArray = $('.about-me-text').text().split(' ');
+var lengthOfAboutMeSection = aboutMeTextArray.length;
+if($height >= 3350) {
+
+for(var i=0; i< lengthOfAboutMeSection; i++){
+  aboutMeTimer(aboutMeTimeArray[i], '.about-me-text-'+i);
+}
+} else {
+  for(var i=0; i< lengthOfAboutMeSection; i++){
+    aboutMeClassRemover('.about-me-text-'+i);
+  }
+}
+
+
 });
 
+var aboutMeTextArray = $('.about-me-text').text().split(' ');
 
+var arrayOfIndeces = [];
+for(var k=0; k< aboutMeTextArray.length; k++) {
+  arrayOfIndeces.push(k)
+}
+
+var randmizedIndeces = [];
+for(var i=0; i<arrayOfIndeces.length; i++) {
+  var randomIndex = Math.floor(Math.random()*arrayOfIndeces.length);
+  arrayOfIndeces.splice(randomIndex, 0);
+  randmizedIndeces.push(arrayOfIndeces[randomIndex]);
+}
+
+
+var aboutMeSpanArray = [];
+for(var i=0; i<randmizedIndeces.length; i++) {
+  var spanText = `<span class="about-me-text-${randmizedIndeces[i]}">${aboutMeTextArray[i]} </span>`;
+  aboutMeSpanArray.push(spanText)
+}
+
+$('.about-me-text').html(aboutMeSpanArray.join(''))
+
+let aboutMeTimeArray=[]
+for (let i=0; i<aboutMeTextArray.length; i++) {
+  aboutMeTimeArray[i] = i*20 +20
+}
+
+let aboutMeTimer = (time, cls) => {
+  setTimeout(() => {
+    $(cls).css({"color": "rgb(255, 95, 95)" })
+  }, time)
+}
+
+let aboutMeClassRemover = (cls) => {
+  $(cls).css({"color": "rgb(0, 0, 0)"})
+}
 
 
 
@@ -159,19 +194,19 @@ $(window).scroll(function() {
 
 let timerRed = (time, cls) => {
   setTimeout(() => {
-    $(cls).css({"background": "rgb(255, 95, 95)" })
+    $(cls).addClass('start-red')
   }, time)
 }
 
 let timerBlue = (time, cls) => {
   setTimeout(() => {
-    $(cls).css({"background": "rgb(53,147,207)" })
+    $(cls).addClass('start-blue')
   }, time)
 }
 
 let timerGreen = (time, cls) => {
   setTimeout(() => {
-    $(cls).css({"background": "rgb(81, 255, 139)" })
+    $(cls).addClass('start-green')
   }, time)
 }
 
@@ -186,6 +221,7 @@ console.log('time array', timeArray);
 
 
 $('.messenger-box').hover(
+
 
   function() {
     for (let i=0; i<=2499; i+=11) {
@@ -206,33 +242,9 @@ $('.messenger-box').hover(
       timerGreen(timme, clss);
     }
 
+
   },
-  //   var randomNumber = Math.floor(Math.random()*2500); 
-  //   ;
-  //   var randomClass= '.'+classStringArray[randomNumber];
-  //  console.log($(randomClass))
-  //   $(randomClass).css({"background": "green" })
 
-
-
-  // for()
-
-    // setTimeout(()=> {
-    //   $('.row25column25').css({"background": "green" })
-    // },1000)
-
-    // for(var j=1; j<=50; j++) {
-    //   for(var i=1; i<=50; i++){
-    //     var coordinatesObject = 
-    //     {
-    //       row: 0,
-    //       column: 0
-    //     };
-    //     coordinatesObject.column= i;
-    //     coordinatesObject.row=j;
-    //     classObjArray.push(coordinatesObject)
-    //   }
-    // }
 
   function() {
     console.log('exited');
@@ -252,3 +264,94 @@ $( "#portfolio-link" ).hover(
   }
 );
  
+
+
+
+    // //print hellow world
+    // //H Left Bar
+    // $('.twin-row16column12').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row17column12').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column12').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column12').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column12').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column12').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column12').css({"background": "rgb(0, 0, 0)"});
+    // //H middle
+    // $('.twin-row19column13').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column14').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column15').css({"background": "rgb(0, 0, 0)"});
+    // //Hright Bar
+    // $('.twin-row16column16').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row17column16').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column16').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column16').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column16').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column16').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column16').css({"background": "rgb(0, 0, 0)"});
+
+    // //ELeft
+    // $('.twin-row16column18').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row17column18').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column18').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column18').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column18').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column18').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column18').css({"background": "rgb(0, 0, 0)"});
+
+    // $('.twin-row16column19').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row16column20').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row16column21').css({"background": "rgb(0, 0, 0)"});
+   
+    // //Emiddle
+    // $('.twin-row19column19').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column20').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column21').css({"background": "rgb(0, 0, 0)"});
+ 
+
+    // $('.twin-row22column19').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column20').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column21').css({"background": "rgb(0, 0, 0)"});
+
+    //  $('.twin-row16column23').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row17column23').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column23').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column23').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column23').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column23').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column23').css({"background": "rgb(0, 0, 0)"});
+
+    // //L bottom
+    // $('.twin-row22column24').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column25').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column26').css({"background": "rgb(0, 0, 0)"});
+
+    // $('.twin-row16column28').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row17column28').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column28').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column28').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column28').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column28').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column28').css({"background": "rgb(0, 0, 0)"});
+
+    // $('.twin-row22column29').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column30').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column31').css({"background": "rgb(0, 0, 0)"});
+
+    // $('.twin-row17column33').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column33').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column33').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column33').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column33').css({"background": "rgb(0, 0, 0)"});
+
+    // $('.twin-row16column34').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column34').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row16column35').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column35').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row16column36').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row22column36').css({"background": "rgb(0, 0, 0)"});
+    // // O right 
+    // $('.twin-row17column37').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row18column37').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row19column37').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row20column37').css({"background": "rgb(0, 0, 0)"});
+    // $('.twin-row21column37').css({"background": "rgb(0, 0, 0)"});

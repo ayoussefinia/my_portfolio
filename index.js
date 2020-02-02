@@ -85,6 +85,32 @@ for(var i=0; i<detailsIcons.length; i++) {
 $(window).scroll(function() {
   var $height = $(window).scrollTop();
   console.log($height);
+  if($height >= 57) {
+    $('.navbar-bottom').addClass('navbar-bottom-sticky');
+    $('.nav-link').removeClass('nav-link-expand');
+    $('.nav-link').addClass('nav-link-condense');
+
+    var nameLeftNavBar = $('<div/>').addClass('position-name-left').text('Alex Youssefinia');
+    $('.navbar-bottom').append(nameLeftNavBar);
+    $('.position-name-left').removeClass('opacity-fade-out');
+    nameLeftNavBar.addClass('opacity-transition');
+    $('.position-name-left').addClass('opacity-transition');
+    
+  }else{
+    // var nameLeftNavBar = $('.position-name-left')
+    // $('.navbar-bottom').remove(nameLeftNavBar);
+   
+    $('.nav-link').addClass('nav-link-expand');
+    $('.position-name-left').removeClass('opacity-transition');
+    $('.position-name-left').addClass('opacity-fade-out');
+    $('.navbar-bottom').removeClass('navbar-bottom-sticky');
+    $('.nav-link').removeClass('nav-link-condense');
+    // setTimeout(function(){
+    //   $('.position-name-left').remove()
+    //  }, 80);
+    
+
+  } 
 
   if($height >= 210) {
     $('.github-left').addClass('animate-top-right');
@@ -136,6 +162,7 @@ $(window).scroll(function() {
 
 var aboutMeTextArray = $('.about-me-text').text().split(' ');
 var lengthOfAboutMeSection = aboutMeTextArray.length;
+
 if($height >= 3350) {
 
 for(var i=0; i< lengthOfAboutMeSection; i++){
@@ -180,12 +207,12 @@ for (let i=0; i<aboutMeTextArray.length; i++) {
 
 let aboutMeTimer = (time, cls) => {
   setTimeout(() => {
-    $(cls).css({"color": "rgb(255, 95, 95)" })
+    $(cls).addClass('text-wave')
   }, time)
 }
 
 let aboutMeClassRemover = (cls) => {
-  $(cls).css({"color": "rgb(0, 0, 0)"})
+  $(cls).removeClass('text-wave')
 }
 
 
@@ -196,18 +223,28 @@ let timerRed = (time, cls) => {
   setTimeout(() => {
     $(cls).addClass('start-red')
   }, time)
+  setTimeout(() => {
+    $(cls).removeClass('start-red')
+  }, time+20000)
 }
 
 let timerBlue = (time, cls) => {
   setTimeout(() => {
     $(cls).addClass('start-blue')
   }, time)
+  setTimeout(() => {
+    $(cls).removeClass('start-blue')
+  }, time+15000)
 }
 
 let timerGreen = (time, cls) => {
   setTimeout(() => {
     $(cls).addClass('start-green')
   }, time)
+  setTimeout(() => {
+    $(cls).removeClass('start-green')
+  }, time+20000)
+  
 }
 
 let timeArray=[]
@@ -216,142 +253,45 @@ for (let i=0; i<=2499; i++) {
 }
 
 console.log('time array', timeArray);
-
-
-
-
-$('.messenger-box').hover(
-
-
-  function() {
-    for (let i=0; i<=2499; i+=11) {
-      let clss = '.'+classStringArray[i];
-      console.log('class', clss)
-      let timme = timeArray[i]
-      console.log('time', timme)
-      timerRed(timme, clss);
-    }
-    for (let i=2; i<=2499; i+=11) {
-      let clss = '.'+classStringArray[i];
-      let timme = timeArray[i]
-      timerBlue(timme, clss);
-    }
-    for (let i=4; i<=2499; i+=11) {
-      let clss = '.'+classStringArray[i];
-      let timme = timeArray[i]
-      timerGreen(timme, clss);
-    }
-
-
-  },
-
-
-  function() {
-    console.log('exited');
+setTimeout(function() {
+  for (let i=0; i<=2499; i+=11) {
+    let clss = '.'+classStringArray[i];
+    console.log('class', clss)
+    let timme = timeArray[i]
+    console.log('time', timme)
+    timerRed(timme, clss);
   }
-)
+  for (let i=2; i<=2499; i+=11) {
+    let clss = '.'+classStringArray[i];
+    let timme = timeArray[i]
+    timerBlue(timme, clss);
+  }
+  for (let i=4; i<=2499; i+=11) {
+    let clss = '.'+classStringArray[i];
+    let timme = timeArray[i]
+    timerGreen(timme, clss);
+  }
+
+}, 1500)
+
+
 
 $( "#portfolio-link" ).hover(
   function() {
     $(".portfolio-link-list").css("display", "block");
     $(".portfolio-link-list").removeClass("invisible");
     $(".portfolio-link-list").addClass("visible");
- 
+
   }, function() {
-    // $(".portfolio-link-list").css("display", "none")
+
     $(".portfolio-link-list").removeClass("visible");
     $(".portfolio-link-list").addClass("invisible");
+
+
   }
 );
  
 
 
 
-    // //print hellow world
-    // //H Left Bar
-    // $('.twin-row16column12').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row17column12').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column12').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column12').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column12').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column12').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column12').css({"background": "rgb(0, 0, 0)"});
-    // //H middle
-    // $('.twin-row19column13').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column14').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column15').css({"background": "rgb(0, 0, 0)"});
-    // //Hright Bar
-    // $('.twin-row16column16').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row17column16').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column16').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column16').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column16').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column16').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column16').css({"background": "rgb(0, 0, 0)"});
-
-    // //ELeft
-    // $('.twin-row16column18').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row17column18').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column18').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column18').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column18').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column18').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column18').css({"background": "rgb(0, 0, 0)"});
-
-    // $('.twin-row16column19').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row16column20').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row16column21').css({"background": "rgb(0, 0, 0)"});
-   
-    // //Emiddle
-    // $('.twin-row19column19').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column20').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column21').css({"background": "rgb(0, 0, 0)"});
- 
-
-    // $('.twin-row22column19').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column20').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column21').css({"background": "rgb(0, 0, 0)"});
-
-    //  $('.twin-row16column23').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row17column23').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column23').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column23').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column23').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column23').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column23').css({"background": "rgb(0, 0, 0)"});
-
-    // //L bottom
-    // $('.twin-row22column24').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column25').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column26').css({"background": "rgb(0, 0, 0)"});
-
-    // $('.twin-row16column28').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row17column28').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column28').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column28').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column28').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column28').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column28').css({"background": "rgb(0, 0, 0)"});
-
-    // $('.twin-row22column29').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column30').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column31').css({"background": "rgb(0, 0, 0)"});
-
-    // $('.twin-row17column33').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column33').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column33').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column33').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column33').css({"background": "rgb(0, 0, 0)"});
-
-    // $('.twin-row16column34').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column34').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row16column35').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column35').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row16column36').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row22column36').css({"background": "rgb(0, 0, 0)"});
-    // // O right 
-    // $('.twin-row17column37').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row18column37').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row19column37').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row20column37').css({"background": "rgb(0, 0, 0)"});
-    // $('.twin-row21column37').css({"background": "rgb(0, 0, 0)"});
+    

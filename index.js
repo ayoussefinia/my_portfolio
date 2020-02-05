@@ -1,7 +1,47 @@
 console.log('index js loaded');
 var classStringArray = [];
+var $container = $('body,html')
+var $aboutMeTitle = $('#about-me-title-1');
+var $contactTitle = $('#contact-title');
+var $featuredProjectsHeader= $('.featured-projects-header');
+var $portfolioHeader = $('.portfolio-header');
+
+var aboutMeOffset = $aboutMeTitle.offset().top - 100 - $container.offset().top + $container.offset().top;
+
+var contactOffset = $contactTitle.offset().top  - $container.offset().top + $container.offset().top;
+
+var featuredProjectsOffset = $featuredProjectsHeader.offset().top  - 100 - $container.offset().top + $container.offset().top;
+
+var portfolioOffset = $portfolioHeader.offset().top  - 100 - $container.offset().top + $container.offset().top;
 
 $( document ).ready(function() {
+//scroll to about me when clicked
+$("#about-me-nav-link").click(function() {
+  $container.animate({
+      scrollTop: aboutMeOffset
+})
+});
+
+$("#contact-nav-link").click(function() {
+  $container.animate({
+      scrollTop: contactOffset
+})
+});
+
+$('.featured-projects-nav-link').click(function() {
+  $container.animate({
+    scrollTop: featuredProjectsOffset
+  })
+})
+
+$('.gallery-nav-link').click(function() {
+  $container.animate({
+    scrollTop: portfolioOffset
+  })
+})
+
+
+
   //creates an array of objects with two key value pairs row and column wich will end in  50 rows and columns i.e.a perfect squre
   var classObjArray = [];
   for(var j=1; j<=50; j++) {
@@ -114,10 +154,14 @@ $(window).scroll(function() {
 
   if($height >= 210) {
     $('.github-left').addClass('animate-top-right');
+    $('.github-left-sm').addClass('animate-top-right-sm');
     $('.window-left').addClass('animate-bottom-left');
+    $('.window-left-sm').addClass('animate-bottom-left-sm');
   } else {
     $('.github-left').removeClass('animate-top-right');
+    $('.github-left-sm').removeClass('animate-top-right-sm');
     $('.window-left').removeClass('animate-bottom-left');
+    $('.window-left-sm').removeClass('animate-bottom-left-sm');
   }
 
 

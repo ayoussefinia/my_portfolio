@@ -175,6 +175,7 @@ html {
   /* margin-top: 0; */
   margin: 0;
   padding: 0;
+  
 }
 
 .nav-link {
@@ -220,7 +221,7 @@ html {
   color: rgb(65, 65, 65);
   opacity: 0;
   border-bottom: 1px solid black;
-  
+  background: white;
  
 }
 /* .initial{
@@ -249,6 +250,9 @@ html {
 
 .portfolio-link:hover {
   color: rgb(243,94,70);
+}
+.blue-link {
+  text-decoration: none;
 }
 
 .introduction {
@@ -1223,9 +1227,15 @@ html {
   font-family: 'Anton', sans-serif;
 }
 
-/* .github-left-sm {
-  transform: rotate(-45deg);
-} */
+.github-left-sm {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(90px);
+  z-index: 10;
+  font-family: 'Anton', sans-serif;
+}
 
 .window-left {
   display: flex;
@@ -1235,9 +1245,16 @@ html {
   z-index: 100;
   font-family: 'Anton', sans-serif;
 }
-/* .window-left-sm {
-  transform: rotate(-45deg);
-} */
+.window-left-sm {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-90px);
+  z-index: 100;
+  font-family: 'Anton', sans-serif;
+}
+
 /* .window-left:hover {
   cursor: pointer;
   color: lightgreen;
@@ -1267,6 +1284,12 @@ html {
 .animate-bottom-left {
   animation: animate-bottom-left 5s cubic-bezier(.06,.95,1,-0.01) 25;
 }
+.animate-top-right-sm {
+  animation: animate-top-right-sm 5s cubic-bezier(.06,.95,1,-0.01) 25;
+}
+.animate-bottom-left-sm {
+  animation: animate-bottom-left-sm 5s cubic-bezier(.06,.95,1,-0.01) 25;
+}
 .white-link {
   color:white;
 }
@@ -1281,6 +1304,17 @@ html {
     transform: translateX(125px) rotate(45deg);
   }
 }
+@keyframes animate-top-right-sm {
+  0% {
+    transform: translateX(90px);
+  }
+  50% {
+    transform: translateX(110px);
+  }
+  100% {
+    transform: translateX(90px);
+  }
+}
 @keyframes animate-bottom-left {
   0% {
     transform: translateX(-125px) rotate(45deg);
@@ -1290,6 +1324,17 @@ html {
   }
   100% {
     transform: translateX(-125px) rotate(45deg);
+  }
+}
+@keyframes animate-bottom-left-sm {
+  0% {
+    transform: translateX(-90px);
+  }
+  50% {
+    transform: translateX(-110px);
+  }
+  100% {
+    transform: translateX(-90px);
   }
 }
 

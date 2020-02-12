@@ -240,6 +240,10 @@ var aboutMeSpanArray = [];
 for(var i=0; i<randmizedIndeces.length; i++) {
   var spanText = `<span class="about-me-text-${randmizedIndeces[i]}">${aboutMeTextArray[i]} </span>`;
   aboutMeSpanArray.push(spanText)
+  if (aboutMeTextArray[i] == 'life') {
+    var br = '<br>';
+    aboutMeSpanArray.push(br);
+  }
 }
 
 $('.about-me-text').html(aboutMeSpanArray.join(''))

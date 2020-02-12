@@ -1858,7 +1858,7 @@ html {
   font-family: 'Anton', sans-serif;
   margin: 0;
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
   font-weight: 100;
   text-align: center;
   padding: 10px 15px;
@@ -1867,7 +1867,7 @@ html {
 }
 
 .text-wave {
-  animation: text-wave 10s linear 3;
+  animation: text-wave 2s linear 1;
 }
 
 @keyframes text-wave {
@@ -1877,7 +1877,8 @@ html {
   }
   50% {
     transform: translate(-.5px, -.5px);
-    color: rgb(255, 0, 0);
+    /* color: rgb(255, 0, 0); */
+    color: rgb(138, 62, 119);
   }
   100% {
   
